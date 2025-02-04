@@ -8,7 +8,6 @@ public class UsuariosBD {
      * Método principal de ejemplo
      */
     public static void main(String[] args) {
-        String username, password;
         Usuario usuario = null;
 
         Scanner sc = new Scanner(System.in);
@@ -71,8 +70,7 @@ public class UsuariosBD {
         username = sc.nextLine();
         System.out.print("Contraseña: ");
         password = sc.nextLine();
-        Usuario usuario = new Usuario(username, password);
-        return usuario;
+        return new Usuario(username, password);
     }
 
 }
