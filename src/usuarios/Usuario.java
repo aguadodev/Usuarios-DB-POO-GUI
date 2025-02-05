@@ -61,8 +61,9 @@ public class Usuario {
 
     public boolean crearBD() {
         Connection conexion = Conexion.conectar();
-        Statement sentencia = null;
+        Statement sentencia;
         try {
+            sentencia = conexion.createStatement();
             int resultado = sentencia.executeUpdate("INSERT INTO user (username, password) VALUES ('" + username + "', '"
                     + Util.generarStringHash2Y(password) + "')");
             sentencia.close();
